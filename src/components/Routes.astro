@@ -13,7 +13,7 @@ console.log(routes);
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
   {
     routes.map(route => (
-      <CardRoute></CardRoute>
+      <CardRoute id={route.id} title={route.title} date={route.date} distance={route.distance} duration={route.duration}></CardRoute>
       <h2>Ruta #{route.id}</h2>
     ))
   }
