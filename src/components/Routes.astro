@@ -1,0 +1,20 @@
+---
+import { type ApiRoutesResponse } from "../types/api";
+import CardRoute from "../components/CardRoute.astro"
+
+const res = await fetch('http://localhost:3005/routes')
+
+const routes = await res.json() as ApiRoutesResponse[]
+
+console.log(routes);
+
+---
+
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    routes.map(route => (
+      <CardRoute></CardRoute>
+      <h2>Ruta #{route.id}</h2>
+    ))
+  }
+</div>
