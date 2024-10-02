@@ -1,7 +1,9 @@
 ---
 import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
-import LinkedIn from '../icons/LinkedIn.astro'
+import LinkedInIcon from '../icons/LinkedIn.astro'
+import GithubIcon from '../icons/Github.astro'
+import SocialPill from '../components/SocialPill.astro';
 ---
 
 <Layout title="Ignacio Yuste López">
@@ -27,12 +29,16 @@ import LinkedIn from '../icons/LinkedIn.astro'
         <span class="opacity-75">Especializado en la creacion de codigo de para pruebas</span>
       </h2>
 
-      <ul>
-        <a href="https://www.linkedin.com/in/nachoyustelopez/">
-          <LinkedIn class="w-6 h-6"/>
+      <nav class="flex gap-x-2">
+        <SocialPill href="https://www.linkedin.com/in/nachoyustelopez/">
+          <LinkedInIcon class="w-6 h-6"/>
           LinkedIn
-        </a>
-      </ul>
+        </SocialPill>
+        <SocialPill href="https://github.com/iyustlop">
+          <GithubIcon class="w-6 h-6"/>
+          Github
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
