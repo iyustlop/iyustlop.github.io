@@ -1,0 +1,46 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "July 2022",
+    title: "Senior QA Engineer & QA Lead",
+    description:
+      "Leader del equipo de QAs de canales asistidos. Creación y mantenimiento de varios frameworks basado en Maven, Java, Junit, Selenium, Appium y Cucumber (implementacion de Gherkin). Gestión del plan de pruebas de la Release Train. Creación y automatización de las pruebas tanto en Web como en dispositivos móviles simultáneamente. Creación del framework para la realización de pruebas de IVR",
+  },
+  {
+    date: "July 2021",
+    title: "Senior QA Engineer & QA Lead",
+    description:
+      "Leader del equipo de QA centrados en la creación de herramientas de pruebas de pipelines de ETL y prueba de dichas pipelines entregadas por lo diferentes partners",
+  },
+  {
+    date: "July 2019",
+    title: "Senior QA Engineer",
+    description:
+      "Creación del plan de pruebas de la migración del UI así como los difernetes planes de pruebas para la cerificacion de la Release Train",
+  },
+  {
+    date: "March 2019",
+    title: "Senior QA Engineer",
+    description:
+      "Pruebas de API de un recomendador de contenido basado de IA. Creación del framework de pruebas basado en Spring",
+  },
+  {
+    date: "July 2016",
+    title: "Senior QA Engineer",
+    description:
+      "Creación y gestión del plan de pruebas de una herramienta de Damage Capturing. Creación del framework de pruebas de API de microservicios",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

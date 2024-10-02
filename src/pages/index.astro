@@ -1,10 +1,12 @@
 ---
-import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
 import LinkedInIcon from '../icons/LinkedIn.astro'
 import GithubIcon from '../icons/Github.astro'
 import MailIcon from '../icons/Mail.astro'
-import SocialPill from '../components/SocialPill.astro';
 ---
 
 <Layout 
@@ -12,7 +14,12 @@ import SocialPill from '../components/SocialPill.astro';
   description="Contrata a Ignacio Yuste Lopez para crear el framework de pruebas de tu empresa o la app que tu quieras"
 >
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+    <SectionContainer class="py-44 pb-22">
+      <img 
+      class="rounded w-12 h-15" 
+      src="../../public/iyustlop.jpg"
+      alt="iyustlop photo"
+    />
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
         Hey, soy Ignacio
         <div class="flex justify-center items-center">
@@ -35,19 +42,23 @@ import SocialPill from '../components/SocialPill.astro';
 
       <nav class="flex gap-x-4">
         <SocialPill href="https://www.linkedin.com/in/nachoyustelopez/">
-          <LinkedInIcon class="w-5 h-5"/>
+          <LinkedInIcon class="size-5"/>
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/iyustlop">
-          <GithubIcon class="w-6 h-6"/>
+          <GithubIcon class="size-6"/>
           Github
         </SocialPill>
         <SocialPill href="https://github.com/iyustlop">
-          <MailIcon class="w-6 h-6"/>
+          <MailIcon class="size-6"/>
           iyustlop@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-6">Experiencia Laboral</h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
 
