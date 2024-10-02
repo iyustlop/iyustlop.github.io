@@ -4,24 +4,26 @@ import Badge from '../components/Badge.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro'
 import SectionContainer from '../components/SectionContainer.astro'
+import Projects from '../components/Projects.astro'
 import LinkedInIcon from '../icons/LinkedIn.astro'
 import GithubIcon from '../icons/Github.astro'
 import MailIcon from '../icons/Mail.astro'
 import Briefcase from '../icons/Briefcase.astro'
+import CodeIcon from '../icons/Code.astro'
 ---
 
 <Layout 
   title="Ignacio Yuste López - QA Engineer & Full Stack Developer"
   description="Contrata a Ignacio Yuste Lopez para crear el framework de pruebas de tu empresa o la app que tu quieras"
 >
-  <main>
+  <main class="px-4">
     <SectionContainer class="py-16 pb-12">
       <img 
       class="rounded w-12 h-15" 
       src="../../public/iyustlop.jpg"
       alt="iyustlop photo"
     />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Hey, soy Ignacio
         <div class="flex justify-center items-center">
           <a
@@ -34,24 +36,24 @@ import Briefcase from '../icons/Briefcase.astro'
           </a>
         </div>
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span>+15 años de experiencia en pruebas de SW e implementación de proyectos de pruebas. </span>
         <span class="text-yellow-200/90">Expert QA Engineer & Full Stack Developer</span>
         <span class="text-red-200/90">De Madrid, España.</span> 
         <span class="opacity-75">Especializado en la creacion de codigo de para pruebas</span>
       </h2>
 
-      <nav class="flex gap-x-4">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/nachoyustelopez/">
-          <LinkedInIcon class="size-5"/>
+          <LinkedInIcon class="size-4 lg:size-5"/>
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/iyustlop">
-          <GithubIcon class="size-6"/>
+          <GithubIcon class="size-4 lg:size-6"/>
           Github
         </SocialPill>
         <SocialPill href="https://github.com/iyustlop">
-          <MailIcon class="size-6"/>
+          <MailIcon class="size-4 lg:size-6"/>
           iyustlop@gmail.com
         </SocialPill>
       </nav>
@@ -61,6 +63,13 @@ import Briefcase from '../icons/Briefcase.astro'
         <Briefcase class="size-8"/>
         Experiencia Laboral</h2>
       <Experience />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
