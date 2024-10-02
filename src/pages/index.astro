@@ -3,10 +3,11 @@ import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
 import LinkedInIcon from '../icons/LinkedIn.astro'
 import GithubIcon from '../icons/Github.astro'
+import MailIcon from '../icons/Mail.astro'
 import SocialPill from '../components/SocialPill.astro';
 ---
 
-<Layout title="Ignacio Yuste López">
+<Layout title="Ignacio Yuste López - QA Engineer & Full Stack Developer">
   <main>
     <section class="w-full mx-auto lg:w-[740px] py-44">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
@@ -29,7 +30,7 @@ import SocialPill from '../components/SocialPill.astro';
         <span class="opacity-75">Especializado en la creacion de codigo de para pruebas</span>
       </h2>
 
-      <nav class="flex gap-x-2">
+      <nav class="flex gap-x-4">
         <SocialPill href="https://www.linkedin.com/in/nachoyustelopez/">
           <LinkedInIcon class="w-5 h-5"/>
           LinkedIn
@@ -37,6 +38,10 @@ import SocialPill from '../components/SocialPill.astro';
         <SocialPill href="https://github.com/iyustlop">
           <GithubIcon class="w-6 h-6"/>
           Github
+        </SocialPill>
+        <SocialPill href="https://github.com/iyustlop">
+          <MailIcon class="w-6 h-6"/>
+          iyustlop@gmail.com
         </SocialPill>
       </nav>
     </section>
