@@ -1,9 +1,29 @@
 ---
+import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
-import Routes from '../components/Routes.astro';
 ---
 
-<Layout title="MADriles Bikers.">
-  <Routes />
+<Layout title="Ignacio Yuste López">
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        Hey, soy Ignacio
+        <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/nachoyustelopez/"
+            target="_blank"
+            rel="noopener"
+            class="flex justify-center items-center"
+          >
+            <Badge>Disponible para trabajar</Badge>
+          </a>
+        </div>
+      </h1>
+      <h2 class="text-xl opacity-80">
+        +15 años de experiencia en pruebas de SW e implementación de proyectos de pruebas. De Madrid, España. 
+        Escpecializado en la creacion de codigo de para pruebas
+      </h2>
+    </section>
+  </main>
 </Layout>
 
