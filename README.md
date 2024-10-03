@@ -22,6 +22,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## Leason Learnt
 
-How to create a Static Site
+How to create a Static Site  
 How to deploy the Astro page in Github Pages. 
 
