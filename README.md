@@ -4,7 +4,7 @@
 npm create astro@latest -- --template basics
 ```
 
-[![Open in Linkedin](https://www.svgrepo.com/show/922/linkedin.svg)](https://www.linkedin.com/in/nachoyustelopez/)
+[![Open in Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nachoyustelopez/)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
