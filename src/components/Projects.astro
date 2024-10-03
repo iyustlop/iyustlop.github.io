@@ -1,16 +1,28 @@
 ---
 import ReactJS from '../icons/front/React.astro'
+import Redux from '../icons/front/Redux.astro'
 import Express from '../icons/back/Express.astro'
+import Spring from '../icons/back/Spring.astro'
 const TAGS = {
   REACT: {
     name: "ReactJS",
     class: "bg-black text-white",
     icon: ReactJS
   },
+  REDUX: {
+    name: "Redux-Toolkit",
+    class: "bg-black text-white",
+    icon: Redux
+  },
   EXPRESS: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    name: "Express",
+    class: "bg-black text-white",
     icon: Express
+  },
+  SPRING: {
+    name: "Express",
+    class: "bg-black text-white",
+    icon: Spring
   },
 };
 
@@ -18,19 +30,19 @@ const PROJECTS = [
   {
     title: "Full Stack Open - Certification",
     description:
-      "Certificación de Full Stack Developer con React, Express, Playwrigth, Docker, y CI/CD ",
+      "Certificación de Full Stack Developer con React, Express, Playwrigth, Docker, y CI/CD. Dicha certificación incluye aprender conceptos tan importantes como son los diferentes Hooks y a implementar Redux con Redux-toolkit. En la parte Back, se implementa un microservicio con autentificacion mediante jwt que es consumido por un front que almacena el jwt en el localStorage y sirve para manejar el login de un usuario",
     link: "https://fullstackopen.com/es/",
     github: "https://github.com/iyustlop/fullstackopen",
     image: "./public/824shots_so.png",
-    tags: [TAGS.REACT, TAGS.EXPRESS],
+    tags: [TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Microservice with Spring Docker and Deploy with Jenkins in minikube",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+      "Proyecto en Spring de un microservicio, que posteriormente se Dockeriza con Jenkins, es subido a Docker Hub y desde allí con otro Job de Jenkins es deplegado dentro de un kubernetes en local (minikube)",
     link: "https://adventjs.dev",
     image: "/projects/adventjs.webp",
-    tags: [TAGS.REACT, TAGS.EXPRESS],
+    tags: [TAGS.SPRING],
   },
 ];
 ---
@@ -38,14 +50,19 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, tags, image }) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2" >{title}</h3>
+      <p class="text-lg mb-4 text-pretty" >{description}</p>
+      <ul class="flex gap-x-4 flex-row" >
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-2 px-2`} >
+              <tag.icon class="size-5" />
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
-      <img src={image} alt={title} />
+      <img class="rounded shadow shadow-white/10" src={image} alt={title} />
     </article>
   ))
 }
