@@ -1,15 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import SocialPill from '../components/SocialPill.astro';
-import Experience from '../components/Experience.astro'
-import SectionContainer from '../components/SectionContainer.astro'
-import Projects from '../components/Projects.astro'
-import LinkedInIcon from '../icons/LinkedIn.astro'
-import GithubIcon from '../icons/Github.astro'
-import MailIcon from '../icons/Mail.astro'
-import Briefcase from '../icons/Briefcase.astro'
-import CodeIcon from '../icons/Code.astro'
+import AboutMe from '@/components/AboutMe.astro'
+import Badge from '@/components/Badge.astro';
+import Briefcase from '@/icons/Briefcase.astro'
+import CodeIcon from '@/icons/Code.astro'
+import Experience from '@/components/Experience.astro'
+import GithubIcon from '@/icons/Github.astro'
+import Layout from '@/layouts/Layout.astro';
+import LinkedInIcon from '@/icons/LinkedIn.astro'
+import MailIcon from '@/icons/Mail.astro'
+import ProfileIcon from '@/icons/Profile.astro'
+import Projects from '@/components/Projects.astro'
+import SectionContainer from '@/components/SectionContainer.astro'
+import SocialPill from '@/components/SocialPill.astro';
 ---
 
 <Layout 
@@ -70,6 +72,13 @@ import CodeIcon from '../icons/Code.astro'
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+    <SectionContainer class="py-16" id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProfileIcon class="size-7" />
+        Sobre mi
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
