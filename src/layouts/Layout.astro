@@ -1,16 +1,19 @@
 ---
-import "@fontsource-variable/onest"
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import "@fontsource-variable/onest";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-interface Props { title:string, description:string }
+interface Props {
+	title: string;
+	description: string;
+}
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
@@ -19,17 +22,16 @@ const { description, title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body>
-		<div 
-			class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950 
-			[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+		<div
+			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+		>
 		</div>
 		<Header />
-			<slot />
+		<slot />
 		<Footer />
 	</body>
 </html>
 <style is:global>
-
 	:root {
 		color-scheme: dark;
 	}
@@ -38,7 +40,7 @@ const { description, title } = Astro.props
 		font-family: "Onest Variable", system-ui, sans-serif;
 		scroll-behavior: smooth;
 	}
-	
+
 	body {
 		background: #050505;
 		display: flex;
@@ -46,7 +48,7 @@ const { description, title } = Astro.props
 		min-height: 100vh;
 	}
 
-	@media (prefers-reduce-motion: reduce){
+	@media (prefers-reduce-motion: reduce) {
 		html {
 			scroll-behavior: auto;
 		}

@@ -3,6 +3,8 @@ import ReactJS from '../icons/front/React.astro'
 import Redux from '../icons/front/Redux.astro'
 import Express from '../icons/back/Express.astro'
 import Spring from '../icons/back/Spring.astro'
+import LinkButton from './LinkButton.astro';
+import Github from '@/icons/Github.astro';
 const TAGS = {
   REACT: {
     name: "ReactJS",
@@ -20,7 +22,7 @@ const TAGS = {
     icon: Express
   },
   SPRING: {
-    name: "Express",
+    name: "Spring",
     class: "bg-black text-white",
     icon: Spring
   },
@@ -41,6 +43,7 @@ const PROJECTS = [
     description:
       "Proyecto en Spring de un microservicio, que posteriormente se Dockeriza con Jenkins, es subido a Docker Hub y desde allí con otro Job de Jenkins es deplegado dentro de un kubernetes en local (minikube)",
     link: "https://adventjs.dev",
+    github: "https://github.com/iyustlop/spring-mongo-docker",
     image: "/845shots_so.webp",
     tags: [TAGS.SPRING],
   },
@@ -48,7 +51,7 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link, github }) => (
     <article>
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2" >{title}</h3>
       <p class="text-lg mb-4 text-pretty" >{description}</p>
@@ -63,6 +66,12 @@ const PROJECTS = [
         ))}
       </ul>
       <img class="rounded shadow shadow-white/10" src={image} alt={title} />
+      <footer class="flex gap-x-2 mt-2 mb-4" >
+        <LinkButton href={github}>
+          <Github  class="size-6" />
+          Ver codigo Fuente
+        </LinkButton>
+      </footer>
     </article>
   ))
 }
