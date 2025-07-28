@@ -1,0 +1,27 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "iyustlop.github.io",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "devcontainer",
+	"workspaceFolder": "/app",
+	"overrideCommand": true,
+	"shutdownAction": "none",
+	"appPort": [
+		4321
+	],
+	"extensions": [
+		"astro-build.astro-vscode",
+		"bradlc.vscode-tailwind"
+	],
+	"remoteUser": "node",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {
+			"installGit": "true"
+		}
+	},
+	"mounts": [
+		"source=${env:HOME}/.ssh,target=/home/node/.ssh,type=bynd,consistency=cached"
+	],
+	"postCreateCommand": "npm install"
+}
