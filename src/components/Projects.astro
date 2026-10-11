@@ -34,6 +34,7 @@ const PROJECTS = [
     description:
       "Certificación de Full Stack Developer con React, Express, Playwrigth, Docker, y CI/CD. Dicha certificación incluye aprender conceptos tan importantes como son los diferentes Hooks y a implementar Redux con Redux-toolkit. En la parte Back, se implementa un microservicio con autentificacion mediante jwt que es consumido por un front que almacena el jwt en el localStorage y sirve para manejar el login de un usuario",
     link: "https://fullstackopen.com/es/",
+    linkLabel: "Ver certificación",
     github: "https://github.com/iyustlop/fullstackopen",
     image: "/824shots_so.png",
     tags: [TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS],
@@ -43,7 +44,6 @@ const PROJECTS = [
       "Microservice with Spring Docker and Deploy with Jenkins in minikube",
     description:
       "Proyecto en Spring de un microservicio, que posteriormente se Dockeriza con Jenkins, es subido a Docker Hub y desde allí con otro Job de Jenkins es deplegado dentro de un kubernetes en local (minikube)",
-    link: "https://adventjs.dev",
     github: "https://github.com/iyustlop/spring-mongo-docker",
     image: "/845shots_so.webp",
     tags: [TAGS.SPRING],
@@ -53,7 +53,7 @@ const PROJECTS = [
 
 <section class="flex flex-col gap-y-10">
   {
-    PROJECTS.map(({ title, description, tags, image, link, github }) => (
+    PROJECTS.map(({ title, description, tags, image, link, linkLabel, github }) => (
       <article>
         <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
         <p class="text-lg mb-2 text-pretty">{description}</p>
@@ -69,8 +69,19 @@ const PROJECTS = [
             </li>
           ))}
         </ul>
-        <img class="rounded shadow shadow-white/10" src={image} alt={title} />
+        <img
+          class="aspect-video w-full rounded object-cover shadow shadow-white/10"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+          loading="lazy"
+          decoding="async"
+        />
         <footer class="flex gap-x-2 mt-2">
+          {link && (
+            <LinkButton href={link}>
+              {linkLabel ?? "Más información"}
+            </LinkButton>
+          )}
           {github && (
             <LinkButton href={github}>
               <Github class="size-6" />

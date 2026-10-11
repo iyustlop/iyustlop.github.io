@@ -18,34 +18,37 @@ import SocialPill from '@/components/SocialPill.astro';
   title="Ignacio Yuste López - QA Engineer & Full Stack Developer"
   description="Contrata a Ignacio Yuste Lopez para crear el framework de pruebas de tu empresa o la app que tu quieras"
 >
-  <main class="px-4">
+  <main id="top" class="px-4">
     <SectionContainer class="py-16 pb-12">
       <img 
-      class="rounded w-12 h-15" 
+      class="h-16 w-16 rounded-full object-cover ring-2 ring-white/15"
       src="/iyustlop.webp"
-      alt="iyustlop photo"
-    />
-      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-        Hey, soy Ignacio
-        <div class="flex justify-center items-center">
-          <a
-            href="https://www.linkedin.com/in/nachoyustelopez/"
-            target="_blank"
-            rel="noopener"
-            class="flex justify-center items-center hover:scale-105 transition"
-          >
-            <Badge>Disponible para trabajar</Badge>
-          </a>
-        </div>
-      </h1>
+      alt="Retrato de Ignacio Yuste"
+      width="64"
+      height="64"
+      fetchpriority="high"
+      />
+      <div class="flex flex-col items-start gap-y-4 pb-6 pt-5 md:flex-row md:items-center md:gap-x-5 lg:pb-10">
+        <h1 class="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+          Hey, soy Ignacio
+        </h1>
+        <a
+          href="https://www.linkedin.com/in/nachoyustelopez/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition hover:scale-105 focus-visible:rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200"
+        >
+          <Badge>Actualemte trabajando</Badge>
+        </a>
+      </div>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span>+15 años de experiencia en pruebas de SW e implementación de proyectos de pruebas. </span>
         <span class="text-yellow-200/90">Expert QA Engineer & Full Stack Developer</span>
         <span class="text-red-200/90">De Madrid, España.</span> 
-        <span class="opacity-75">Especializado en la creacion de codigo de para pruebas</span>
+        <span class="opacity-75">Especializado en crear soluciones de automatización de pruebas.</span>
       </h2>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
+      <nav aria-label="Perfiles y contacto" class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/nachoyustelopez/">
           <LinkedInIcon class="size-4 lg:size-5"/>
           LinkedIn
@@ -54,7 +57,7 @@ import SocialPill from '@/components/SocialPill.astro';
           <GithubIcon class="size-4 lg:size-6"/>
           Github
         </SocialPill>
-        <SocialPill href="https://github.com/iyustlop">
+        <SocialPill href="mailto:iyustlop@gmail.com">
           <MailIcon class="size-4 lg:size-6"/>
           iyustlop@gmail.com
         </SocialPill>
