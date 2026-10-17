@@ -18,6 +18,9 @@ Requires Node `>=22.12.0` (Astro 6+ dropped Node 18/20; the devcontainer and dep
 - `@/*` imports alias `src/*` (see `tsconfig.json`). Prefer `@/components/...` over relative paths.
 - `src/components/`, `src/icons/`, `src/pages/` — Astro components only, no client framework.
 - All site content is **hardcoded in Spanish** inside component script arrays, e.g. `EXPERIENCE` in `src/components/Experience.astro` and `PROJECTS`/`TAGS` in `src/components/Projects.astro`. Edit content there, not via data fetching.
+- The home page navigation targets `#top`, `#experiencia`, `#proyectos`, `#sobre-mi`, and `#contacto`; `#contacto` is the contact block in `src/components/Footer.astro`.
+- `ExperienceItem.astro` renders the timeline `<li>` itself. Keep the `EXPERIENCE.map()` in `Experience.astro` free of an extra `<li>` wrapper, and position the marker clear of the date.
+- The home-page availability badge is in `src/pages/index.astro`; the email contact links should use `mailto:iyustlop@gmail.com`.
 - `src/pages/components.astro` is a design-system showcase; `src/pages/about.astro` is leftover template text.
 
 ## Gotchas
