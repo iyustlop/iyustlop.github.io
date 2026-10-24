@@ -2,7 +2,7 @@
 
 Personal portfolio site (Astro 7 + Tailwind 3 + TypeScript strict), deployed to GitHub Pages.
 
-Requires Node `>=22.12.0` (Astro 6+ dropped Node 18/20; the devcontainer and deploy action use Node 22/24).
+Requires Node `>=22.12.0` (declared in `package.json` `engines`; the devcontainer and deploy action use Node 22/24).
 
 ## Commands
 
@@ -27,7 +27,6 @@ Requires Node `>=22.12.0` (Astro 6+ dropped Node 18/20; the devcontainer and dep
 
 ## Gotchas
 
-- `package.json` `name` is `madriles-bikers` and `db.json` + the `npm run server` script (json-server on port 3005) are unused leftovers from a template. No page fetches them; ignore unless explicitly asked.
 - Deploy is triggered by pushing to `master` (staging branch), not `main`. Workflow: `.github/workflows/deploy.yml` (`withastro/action@v6`, Node 24). Site is a user page at `https://iyustlop.github.io`, so no `base` path is configured.
 - Tailwind 3 is wired through PostCSS (`postcss.config.mjs`), **not** the `@astrojs/tailwind` integration (that integration only supports Astro ≤5). `src/styles/global.css` holds the `@tailwind` directives and is imported in `Layout.astro`. `tailwind.config.mjs` uses `darkMode: 'class'` and scans `./src/**/*`.
 - `astro.config.mjs` pins `compressHTML: true`. Astro 7's new `'jsx'` default strips whitespace between inline elements, which visually joins adjacent `<span>`s; keep `true` unless you add explicit `{" "}`.

@@ -1,3 +1,1 @@
 /// <reference path="../.astro/types.d.ts" />
-
-declare module "@fontsource-variable/onest";

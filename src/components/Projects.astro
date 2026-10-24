@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import ReactJS from "../icons/front/React.astro";
-import Redux from "../icons/front/Redux.astro";
-import Express from "../icons/back/Express.astro";
-import Spring from "../icons/back/Spring.astro";
-import LinkButton from "./LinkButton.astro";
+import ReactJS from "@/icons/front/React.astro";
+import Redux from "@/icons/front/Redux.astro";
+import Express from "@/icons/back/Express.astro";
+import Spring from "@/icons/back/Spring.astro";
+import LinkButton from "@/components/LinkButton.astro";
 import Github from "@/icons/Github.astro";
 import fullstackImage from "@/assets/824shots_so.png";
 import springImage from "@/assets/845shots_so.webp";
@@ -54,7 +54,7 @@ const PROJECTS = [
 ];
 ---
 
-<section class="flex flex-col gap-y-10">
+<div class="flex flex-col gap-y-10">
   {
     PROJECTS.map(({ title, description, tags, image, link, linkLabel, github }) => (
       <article>
@@ -99,4 +99,4 @@ const PROJECTS = [
       </article>
     ))
   }
-</section>
+</div>
