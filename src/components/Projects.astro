@@ -1,10 +1,13 @@
 ---
+import { Image } from "astro:assets";
 import ReactJS from "../icons/front/React.astro";
 import Redux from "../icons/front/Redux.astro";
 import Express from "../icons/back/Express.astro";
 import Spring from "../icons/back/Spring.astro";
 import LinkButton from "./LinkButton.astro";
 import Github from "@/icons/Github.astro";
+import fullstackImage from "@/assets/824shots_so.png";
+import springImage from "@/assets/845shots_so.webp";
 const TAGS = {
   REACT: {
     name: "ReactJS",
@@ -32,20 +35,20 @@ const PROJECTS = [
   {
     title: "Full Stack Open - Certification",
     description:
-      "Certificación de Full Stack Developer con React, Express, Playwrigth, Docker, y CI/CD. Dicha certificación incluye aprender conceptos tan importantes como son los diferentes Hooks y a implementar Redux con Redux-toolkit. En la parte Back, se implementa un microservicio con autentificacion mediante jwt que es consumido por un front que almacena el jwt en el localStorage y sirve para manejar el login de un usuario",
+      "Certificación de Full Stack Developer con React, Express, Playwright, Docker, y CI/CD. Dicha certificación incluye aprender conceptos tan importantes como son los diferentes Hooks y a implementar Redux con Redux-toolkit. En la parte Back, se implementa un microservicio con autenticación mediante jwt que es consumido por un front que almacena el jwt en el localStorage y sirve para manejar el login de un usuario",
     link: "https://fullstackopen.com/es/",
     linkLabel: "Ver certificación",
     github: "https://github.com/iyustlop/fullstackopen",
-    image: "/824shots_so.png",
+    image: fullstackImage,
     tags: [TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS],
   },
   {
     title:
       "Microservice with Spring Docker and Deploy with Jenkins in minikube",
     description:
-      "Proyecto en Spring de un microservicio, que posteriormente se Dockeriza con Jenkins, es subido a Docker Hub y desde allí con otro Job de Jenkins es deplegado dentro de un kubernetes en local (minikube)",
+      "Proyecto en Spring de un microservicio, que posteriormente se Dockeriza con Jenkins, es subido a Docker Hub y desde allí con otro Job de Jenkins es desplegado dentro de un kubernetes en local (minikube)",
     github: "https://github.com/iyustlop/spring-mongo-docker",
-    image: "/845shots_so.webp",
+    image: springImage,
     tags: [TAGS.SPRING],
   },
 ];
@@ -69,12 +72,16 @@ const PROJECTS = [
             </li>
           ))}
         </ul>
-        <img
-          class="aspect-video w-full rounded object-cover shadow shadow-white/10"
+        <Image
           src={image}
           alt={`Captura de pantalla del proyecto ${title}`}
+          widths={[370, 740, 960]}
+          sizes="(min-width: 1024px) 740px, 100vw"
+          format="webp"
+          quality={80}
           loading="lazy"
           decoding="async"
+          class="aspect-video w-full rounded object-cover shadow shadow-white/10"
         />
         <footer class="flex gap-x-2 mt-2">
           {link && (
@@ -85,7 +92,7 @@ const PROJECTS = [
           {github && (
             <LinkButton href={github}>
               <Github class="size-6" />
-              Ver codigo Fuente
+              Ver código fuente
             </LinkButton>
           )}
         </footer>

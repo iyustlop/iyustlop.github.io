@@ -21,7 +21,9 @@ Requires Node `>=22.12.0` (Astro 6+ dropped Node 18/20; the devcontainer and dep
 - The home page navigation targets `#top`, `#experiencia`, `#proyectos`, `#sobre-mi`, and `#contacto`; `#contacto` is the contact block in `src/components/Footer.astro`.
 - `ExperienceItem.astro` renders the timeline `<li>` itself. Keep the `EXPERIENCE.map()` in `Experience.astro` free of an extra `<li>` wrapper, and position the marker clear of the date.
 - The home-page availability badge is in `src/pages/index.astro`; the email contact links should use `mailto:iyustlop@gmail.com`.
-- `src/pages/components.astro` is a design-system showcase; `src/pages/about.astro` is leftover template text.
+- `src/pages/components.astro` is a design-system showcase (noindexed); `src/pages/about.astro` renders the same `AboutMe` content as a standalone page.
+- Images live in `src/assets/` and render through `astro:assets` (`<Image>`); `sharp` is a required dependency for build-time optimization. `public/` only holds files served as-is (favicon, `robots.txt`, `og-image.jpg`).
+- SEO lives in `Layout.astro` (canonical + Open Graph/Twitter, absolute URLs from `site`); `@astrojs/sitemap` excludes `/components`, and `public/` holds `robots.txt` and the static `og-image.jpg`.
 
 ## Gotchas
 

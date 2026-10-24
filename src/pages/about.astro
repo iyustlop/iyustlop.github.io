@@ -1,8 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import AboutMe from "@/components/AboutMe.astro";
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
 ---
 
-<Layout title="About" description="description">
-  <h1>About the project</h1>
-  <p>Madriles Bikers es un grupo de gente que salimos a disfrutar de la moto los fines de semana</p>
+<Layout
+  title="Sobre mí - Ignacio Yuste López"
+  description="Trayectoria de Ignacio Yuste López como QA Engineer y desarrollador Full Stack: automatización de pruebas, frameworks E2E y liderazgo de equipos."
+>
+  <main id="top" class="px-4">
+    <SectionContainer class="py-16 pb-12">
+      <h1 class="mb-8 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+        Sobre mí
+      </h1>
+      <AboutMe />
+      <a
+        class="mt-8 inline-flex rounded text-sm font-medium text-white underline decoration-yellow-200 underline-offset-4 transition hover:text-yellow-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200"
+        href="/#sobre-mi"
+      >
+        Volver al inicio
+      </a>
+    </SectionContainer>
+  </main>
 </Layout>

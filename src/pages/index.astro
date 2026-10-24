@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import AboutMe from '@/components/AboutMe.astro'
+import avatar from "@/assets/iyustlop.webp";
 import Badge from '@/components/Badge.astro';
 import Briefcase from '@/icons/Briefcase.astro'
 import CodeIcon from '@/icons/Code.astro'
@@ -16,17 +18,19 @@ import SocialPill from '@/components/SocialPill.astro';
 
 <Layout 
   title="Ignacio Yuste López - QA Engineer & Full Stack Developer"
-  description="Contrata a Ignacio Yuste Lopez para crear el framework de pruebas de tu empresa o la app que tu quieras"
+  description="Contrata a Ignacio Yuste López para crear el framework de pruebas de tu empresa o la app que tú quieras"
 >
   <main id="top" class="px-4">
     <SectionContainer class="py-16 pb-12">
-      <img 
-      class="h-16 w-16 rounded-full object-cover ring-2 ring-white/15"
-      src="/iyustlop.webp"
-      alt="Retrato de Ignacio Yuste"
-      width="64"
-      height="64"
-      fetchpriority="high"
+      <Image
+        src={avatar}
+        alt="Retrato de Ignacio Yuste"
+        width={128}
+        height={128}
+        format="webp"
+        quality={80}
+        priority
+        class="h-16 w-16 rounded-full object-cover ring-2 ring-white/15"
       />
       <div class="flex flex-col items-start gap-y-4 pb-6 pt-5 md:flex-row md:items-center md:gap-x-5 lg:pb-10">
         <h1 class="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -38,7 +42,7 @@ import SocialPill from '@/components/SocialPill.astro';
           rel="noopener noreferrer"
           class="transition hover:scale-105 focus-visible:rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200"
         >
-          <Badge>Actualemte trabajando</Badge>
+          <Badge>Actualmente trabajando</Badge>
         </a>
       </div>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
@@ -79,7 +83,7 @@ import SocialPill from '@/components/SocialPill.astro';
     <SectionContainer class="py-16" id="sobre-mi">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <ProfileIcon class="size-7" />
-        Sobre mi
+        Sobre mí
       </h2>
       <AboutMe />
     </SectionContainer>
