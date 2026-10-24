@@ -1,5 +1,5 @@
 {
-  "name": "madriles-bikers",
+  "name": "iyustlop-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "server": " npx json-server --watch db.json --port 3005"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -19,9 +18,11 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "autoprefixer": "^10.4.21",
-    "json-server": "^1.0.0-beta.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.13",
     "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
