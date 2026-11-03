@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Personal portfolio site (Astro 7 + Tailwind 3 + TypeScript strict), deployed to GitHub Pages.
+Personal portfolio site (Astro 7 + Tailwind 4 + TypeScript strict), deployed to GitHub Pages.
 
 Requires Node `>=22.23.4` (minimum supported by Astro 7.4+; declared in `package.json` `engines`; the devcontainer and deploy action use Node 22/24).
 
@@ -28,5 +28,5 @@ Requires Node `>=22.23.4` (minimum supported by Astro 7.4+; declared in `package
 ## Gotchas
 
 - Deploy is triggered by pushing to `master` (staging branch), not `main`. Workflow: `.github/workflows/deploy.yml` (`withastro/action@v6`, Node 24). Site is a user page at `https://iyustlop.github.io`, so no `base` path is configured.
-- Tailwind 3 is wired through PostCSS (`postcss.config.mjs`), **not** the `@astrojs/tailwind` integration (that integration only supports Astro ≤5). `src/styles/global.css` holds the `@tailwind` directives and is imported in `Layout.astro`. `tailwind.config.mjs` uses `darkMode: 'class'` and scans `./src/**/*`.
+- Tailwind 4 is wired through the official `@tailwindcss/vite` plugin, **not** the `@astrojs/tailwind` integration. `src/styles/global.css` imports Tailwind and configures class-based dark mode; it is imported in `Layout.astro`.
 - `astro.config.mjs` pins `compressHTML: true`. Astro 7's new `'jsx'` default strips whitespace between inline elements, which visually joins adjacent `<span>`s; keep `true` unless you add explicit `{" "}`.
