@@ -2,7 +2,7 @@
 
 Personal portfolio site (Astro 7 + Tailwind 3 + TypeScript strict), deployed to GitHub Pages.
 
-Requires Node `>=22.12.0` (declared in `package.json` `engines`; the devcontainer and deploy action use Node 22/24).
+Requires Node `>=22.23.4` (minimum supported by Astro 7.4+; declared in `package.json` `engines`; the devcontainer and deploy action use Node 22/24).
 
 ## Commands
 

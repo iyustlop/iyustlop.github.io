@@ -24,7 +24,7 @@ One-page en español con experiencia, proyectos, biografía y contacto.
 | `npm run preview`         | Previsualiza el build local                     |
 | `npm run astro -- check`  | Comprueba tipos y errores de Astro              |
 
-Requiere Node `>=22.12.0`.
+Requiere Node `>=22.23.4`.
 
 ## Estructura
 
