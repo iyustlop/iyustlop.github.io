@@ -8,7 +8,7 @@ One-page en español con experiencia, proyectos, biografía y contacto.
 ## Stack
 
 - [Astro 7](https://astro.build) con salida estática
-- Tailwind CSS 3 vía PostCSS (sin `@astrojs/tailwind`)
+- Tailwind CSS 4 vía el plugin oficial de Vite (sin `@astrojs/tailwind`)
 - TypeScript en modo `strict`
 - Imágenes optimizadas con `astro:assets` + `sharp`
 - Tipografía `@fontsource-variable/onest` (self-hosted)
